@@ -27,5 +27,26 @@ public class MaximumJunitTest {
         System.out.println(max);
         Assertions.assertEquals("patna",max);
     }
+    @Test
+    public void givenStringObjectGenericMethodShouldReturnMax()
+    {
+        String max = maximumTest.maximum("murari","kumar","patna");
+        System.out.println(max);
+        Assertions.assertEquals("patna",max);
+    }
+    @Test
+    public void givenFloatObjectGenericMethodShouldReturnMax()
+    {
+        float max = maximumTest.maximum(4.5f,4.6f,4.7f);
+        System.out.println(max);
+        Assertions.assertEquals(4.7f,max);
+    }
+    @Test
+    public void givenIntegerObjectGenericMethodShouldReturnMax()
+    {
+        int max = maximumTest.maximum(7,8,9);
+        System.out.println(max);
+        Assertions.assertEquals(9,max);
+    }
 
 }
