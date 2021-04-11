@@ -13,4 +13,11 @@ public class MaximumJunitTest {
        System.out.println(max);
         Assertions.assertEquals(9,max);
     }
+    @Test
+    public void givenFloatObjectShouldReturnMax()
+    {
+        float max = maximumTest.maximum(4.5f,4.6f,4.7f);
+        System.out.println(max);
+        Assertions.assertEquals(4.7f,max);
+    }
 }
