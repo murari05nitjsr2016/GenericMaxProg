@@ -28,12 +28,37 @@ public class MaximumTest {
         return max;
 
     }
+    // determines the largest of  three String  objects.
+    public static String maximum(String x, String y, String z) {
+        String max = x;//initially assume x is the largest element
+        if(y.compareTo(max) > 0) {
+            max = y;//here max is y
+        }
+        if(z.compareTo(max) > 0) {
+            max = z;//here max is z now
+        }
+        return max;
+
+    }
+    // generic method to determine the greatest of comparable objects.
+    public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
+        T max = x;//initially assume x is the largest element
+        if(y.compareTo(max) > 0) {
+            max = y;//here max is y
+        }
+        if(z.compareTo(max) > 0) {
+            max = z;//here max is z now
+        }
+        return max;
+
+    }
+
 
     public static void main(String[] args) {
         System.out.println("Welcome in Generics concept");
-        Float xFloat  = 4.4f, yFloat =4.5f, zFloat = 4.6f;
-     Float max =  new MaximumTest().maximum(xFloat,yFloat,zFloat);
-     System.out.println("The maximum  Element is "+max);
+     String xString = "Murari",yString = "kumar",zString = "patna";
+     String max = new MaximumTest().maximum(xString,yString,zString);
+     System.out.println(max);
 
     }
 }
