@@ -20,4 +20,12 @@ public class MaximumJunitTest {
         System.out.println(max);
         Assertions.assertEquals(4.7f,max);
     }
+    @Test
+    public void givenStringObjectShouldReturnMax()
+    {
+        String max = maximumTest.maximum("murari","kumar","patna");
+        System.out.println(max);
+        Assertions.assertEquals("patna",max);
+    }
+
 }
