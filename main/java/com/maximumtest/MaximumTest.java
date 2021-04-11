@@ -53,7 +53,6 @@ public class MaximumTest {
 
     }
 
-
     public static void main(String[] args) {
         System.out.println("Welcome in Generics concept");
      String xString = "Murari",yString = "kumar",zString = "patna";

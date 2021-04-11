@@ -49,5 +49,4 @@ public class MaximumJunitTest {
         Assertions.assertEquals(9,max);
     }
 
-
 }
