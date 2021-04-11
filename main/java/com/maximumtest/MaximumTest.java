@@ -1,6 +1,12 @@
 package com.maximumtest;
 /*@Description:- To find the maximum value among three objects.*/
-public class MaximumTest {
+public class MaximumTest<T extends Comparable<T>> {
+    T x,y,z;
+    public MaximumTest(T x, T y, T z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
     public MaximumTest() {
 
     }
@@ -52,13 +58,20 @@ public class MaximumTest {
         return max;
 
     }
+    public T maximum(){
+        return MaximumTest.maximum(x,y,z);
+    }
 
 
     public static void main(String[] args) {
         System.out.println("Welcome in Generics concept");
-     String xString = "Murari",yString = "kumar",zString = "patna";
-     String max = new MaximumTest().maximum(xString,yString,zString);
-     System.out.println(max);
+        String xString = "Murari",yString = "kumar",zString = "patna";
+        String max = new MaximumTest().maximum(xString,yString,zString);
+        System.out.println(max);
+        Integer xInt = 3 , yInt = 4 ,zInt = 5;
+        int sMax = (int) new MaximumTest(xInt,yInt,zInt).maximum();
+        System.out.println(sMax);
+
 
     }
 }
